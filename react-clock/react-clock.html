@@ -1,0 +1,26 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>React-Clock!</title>
+    </head>
+    <body>
+      <!-- React and ReactDOM and Babel -->
+      <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+      <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+      <div id="root"></div>
+
+      <script type="text/babel">
+      function tick(){
+        const rootContainer = document.getElementById('root');
+        const time = new Date().toLocaleTimeString();
+        const component = <div>Time is {time}</div>;
+        ReactDOM.render(component, rootContainer );
+       }
+      setInterval(tick,1000)
+
+      </script>
+    </body>
+  </html>
